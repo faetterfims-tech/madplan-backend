@@ -34,7 +34,7 @@ Reply ONLY with a valid JSON array, no markdown, no explanation:
         'x-api-key': ANTHROPIC_API_KEY
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-sonnet-4-5',
         max_tokens: 2000,
         messages: [{ role: 'user', content: prompt }]
       })
@@ -74,7 +74,7 @@ Reply ONLY with valid JSON, no markdown:
         'x-api-key': ANTHROPIC_API_KEY
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-sonnet-4-5',
         max_tokens: 600,
         messages: [{ role: 'user', content: prompt }]
       })
@@ -95,3 +95,4 @@ app.get('/', (req, res) => res.send('Madplan API kører! 🥗'));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server kører på port ${PORT}`));
+
